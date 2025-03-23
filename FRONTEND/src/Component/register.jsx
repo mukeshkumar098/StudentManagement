@@ -13,11 +13,7 @@ const Register = () => {
     e.preventDefault();
 
     try {
-      const res = await axios.post("https://student-management-seven-lemon.vercel.app/user/register", {
-        name,
-        email,
-        password,
-      });
+     
       setMessage(res.data.message);
       setTimeout(() => {
         navigate("/login"); // Redirect to login page after successful registration
